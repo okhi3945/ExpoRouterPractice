@@ -1,3 +1,7 @@
+//components 폴더 아래에 있는 컴포넌트들을 한번에 모아서 export 해줌
+
 import ScreenHeaderBtn from "./common/header/ScreenHeaderBtn";
 import Welcome from "./home/welcome/Welcome";
-export { ScreenHeaderBtn, Welcome }
+import Nearbyjobs from './home/nearby/Nearbyjobs'
+import Popularjobs from './home/popular/Popularjobs'
+export { ScreenHeaderBtn, Welcome, Nearbyjobs , Popularjobs }
