@@ -23,6 +23,9 @@ const Popularjobs = () => {
                             renderItem={(item) => (
                                 <PopularJobCard item={item} />
                             )}
+                            keyExtractor={item => item?.job_id} //id 부여 -> 서버에서 job_id를 주면 그걸로 카드들을 구별하겠다.
+                            contentContainerStyle={{columnGap:SIZES.medium}}
+                            horizontal
                         />)}
             </View>
 
