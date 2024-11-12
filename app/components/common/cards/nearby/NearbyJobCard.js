@@ -4,7 +4,6 @@ import styles from "./nearbyjobcard.style"
 import { checkImageURL } from "../../../../../utils"
 
 //nearbyjobcard.style로 스타일이 바뀌었으니 스타일 함수 확인
-//
 const NearbyJobCard = ({ item, handleCardPress }) => {
 
     return (
