@@ -6,4 +6,5 @@ import Nearbyjobs from './home/nearby/Nearbyjobs'
 import Popularjobs from './home/popular/Popularjobs' 
 import PopularJobCard from "./common/cards/popular/PopularJobCard";
 import NearbyJobCard from "./common/cards/nearby/NearbyJobCard";
-export { ScreenHeaderBtn, Welcome, Nearbyjobs , Popularjobs, PopularJobCard, NearbyJobCard }
+import Company from "./jobdetails/company/company";
+export { ScreenHeaderBtn, Welcome, Nearbyjobs , Popularjobs, PopularJobCard, NearbyJobCard, Company }

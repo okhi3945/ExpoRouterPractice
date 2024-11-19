@@ -3,7 +3,7 @@ import { useCallback, useState } from 'react';
 import useFetch from '../../hook/useFetch';
 import { View, Text, ActivityIndicator, Image, ScrollView, RefreshControl, SafeAreaView } from 'react-native';
 import { COLORS, icons, SIZES } from '../../constants' // 디자인에 필요한 요소들 import
-import { ScreenHeaderBtn } from '../components'
+import { ScreenHeaderBtn, Company } from '../components'
 
 //  RefreshControl : refetch 해줄 때 사용 -> 서버가 값을 잘 못가져올 때 새로고침 기능 
 /* 
@@ -60,7 +60,16 @@ const JobDetails = () => {
                     onRefresh={onRefresh}
                 />} // 값 새로고침을 위해 RefreshControl 사용
             >
-
+                {isLoading ? (<ActivityIndicator
+                    size='large' color={COLORS.primary} />
+                ) : error ? (<Text>Something wrong</Text>)
+                    : data.length === 0 ? (<Text>No Data Available</Text>) : (<View style={{ padding: SIZES.medium, paddingBottom: 100 }}>
+                        <Company companyLogo={data[0].employer_log}
+                            jobTitle={data[0].job_title}
+                            companyName={data[0].employer_name}
+                            location={data[0].job_location}
+                        />
+                    </View>)}
             </ScrollView>
         </SafeAreaView>
     );
